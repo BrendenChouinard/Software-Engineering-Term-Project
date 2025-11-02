@@ -1,0 +1,13 @@
+# ninja log v6
+7	181	1762040759538284322	CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o	ed35a31b06a212ab
+7	181	1762040759538679006	CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o	3d0500cdb903d863
+8	182	1762040759539473334	CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o	9504450d5877e611
+6	182	1762040759537719481	CMakeFiles/carbonApp.dir/ui/Screen.cpp.o	1436aa58557c9592
+8	182	1762040759539085316	CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o	bbc03788c0b91d94
+181	201	1762040759712608529	CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o	7592af8a23c6ccef
+5	1267	1762040759536372770	CMakeFiles/carbonApp.dir/main.cpp.o	4d5343b5fefff67b
+1270	1400	1762040760801452778	carbonApp	920daba84a8e1423
+15	1321	1762041847686188760	CMakeFiles/carbonApp.dir/main.cpp.o	4d5343b5fefff67b
+1321	1441	1762041848991932912	carbonApp	920daba84a8e1423
+6	1338	1762041889779196543	CMakeFiles/carbonApp.dir/main.cpp.o	4d5343b5fefff67b
+1338	1473	1762041891111296283	carbonApp	920daba84a8e1423

@@ -1,0 +1,3 @@
+/Users/maddiechouinard/Doucuments/Projects/carbonApp/cmake-build-debug/CMakeFiles/carbonApp.dir
+/Users/maddiechouinard/Doucuments/Projects/carbonApp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/maddiechouinard/Doucuments/Projects/carbonApp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
