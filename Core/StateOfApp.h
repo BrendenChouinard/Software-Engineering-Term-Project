@@ -1,5 +1,4 @@
 //
-// Created by Marotta, Jake on 11/3/25.
 //
 
 #ifndef STATEOFAPP_H
