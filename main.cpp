@@ -14,20 +14,20 @@ int main()
     The created profile should persist as it was saved to disc.*/
     profile_manager* user_profiles = new profile_manager();
     user_profiles->create_profile("Lewis", "mypassword");
-    profile* my_profile = user_profiles->login("Lewis", "mypassword");
+    profile* my_profile = user_profiles->login("User", "mypassword");
     my_profile->add_carbon_source("Source", 15.5f);
     my_profile->add_carbon_source("Other Source", 37.1f);
     delete user_profiles;
 
 
     user_profiles = new profile_manager();
-    profile* profile = user_profiles->login("Lewis", "mypassword");
+    profile* profile = user_profiles->login("User", "mypassword");
     if (profile != nullptr) {
         std::cout << profile->get_carbon_from_source("Source") << std::endl;
         std::cout << profile->get_carbon_from_source("Other Source") << std::endl;
     }
     else {
-        std::cout << "NO" << std::endl;
+        std::cerr << "Invalid Login" << std::endl;
     }
     delete user_profiles;
 
