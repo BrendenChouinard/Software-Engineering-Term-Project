@@ -10,29 +10,45 @@ private:
 	std::string username;
 	std::string password;
 
-public:
-	const std::string& get_username();
-	const std::string& get_password();
-	profile(const std::string& username, const std::string& password);
-};
-
-class profiles {
-private:
-	std::unordered_map<std::string, profile*> profiles_list;
+	std::unordered_map<std::string, float> user_data;
 
 	void write_string(std::ofstream& stream, const std::string& string);
 	void read_string(std::ifstream& stream, std::string& string);
+	
+	void save_to_file(std::ofstream& stream);
+	void load_from_file(std::ifstream& stream);
+
+	profile();
+	profile(const std::string& username, const std::string& password);
+
+public:
+	const std::string& get_username();
+	const std::string& get_password();
+	void add_carbon_source(const std::string& source, const float& amount);
+	float get_carbon_from_source(const std::string& source);
+
+	friend class profile_manager;
+};
+
+
+
+
+
+
+class profile_manager {
+private:
+	std::unordered_map<std::string, profile*> profiles_list;
 
 	void save_profiles();
 	void load_profiles();
 
 public:
-	 profile* create_profile(const std::string& username, const std::string& password);
+	 bool create_profile(const std::string& username, const std::string& password);
 
 	 profile* login(const std::string& username, const std::string& password);
 
-	 profiles();
+	 profile_manager();
 
-	 ~profiles();
+	 ~profile_manager();
 };
 #endif //PROFILES_H
