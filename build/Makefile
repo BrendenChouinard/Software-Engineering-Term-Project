@@ -129,6 +129,54 @@ carbonApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/build
 .PHONY : carbonApp/fast
 
+Core/Calculator.o: Core/Calculator.cpp.o
+.PHONY : Core/Calculator.o
+
+# target to build an object file
+Core/Calculator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o
+.PHONY : Core/Calculator.cpp.o
+
+Core/Calculator.i: Core/Calculator.cpp.i
+.PHONY : Core/Calculator.i
+
+# target to preprocess a source file
+Core/Calculator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/Core/Calculator.cpp.i
+.PHONY : Core/Calculator.cpp.i
+
+Core/Calculator.s: Core/Calculator.cpp.s
+.PHONY : Core/Calculator.s
+
+# target to generate assembly for a file
+Core/Calculator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/Core/Calculator.cpp.s
+.PHONY : Core/Calculator.cpp.s
+
+Core/Profiles.o: Core/Profiles.cpp.o
+.PHONY : Core/Profiles.o
+
+# target to build an object file
+Core/Profiles.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o
+.PHONY : Core/Profiles.cpp.o
+
+Core/Profiles.i: Core/Profiles.cpp.i
+.PHONY : Core/Profiles.i
+
+# target to preprocess a source file
+Core/Profiles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/Core/Profiles.cpp.i
+.PHONY : Core/Profiles.cpp.i
+
+Core/Profiles.s: Core/Profiles.cpp.s
+.PHONY : Core/Profiles.s
+
+# target to generate assembly for a file
+Core/Profiles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/Core/Profiles.cpp.s
+.PHONY : Core/Profiles.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,6 +201,102 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+ui/LoginScreen.o: ui/LoginScreen.cpp.o
+.PHONY : ui/LoginScreen.o
+
+# target to build an object file
+ui/LoginScreen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o
+.PHONY : ui/LoginScreen.cpp.o
+
+ui/LoginScreen.i: ui/LoginScreen.cpp.i
+.PHONY : ui/LoginScreen.i
+
+# target to preprocess a source file
+ui/LoginScreen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.i
+.PHONY : ui/LoginScreen.cpp.i
+
+ui/LoginScreen.s: ui/LoginScreen.cpp.s
+.PHONY : ui/LoginScreen.s
+
+# target to generate assembly for a file
+ui/LoginScreen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.s
+.PHONY : ui/LoginScreen.cpp.s
+
+ui/QuestionScreen.o: ui/QuestionScreen.cpp.o
+.PHONY : ui/QuestionScreen.o
+
+# target to build an object file
+ui/QuestionScreen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o
+.PHONY : ui/QuestionScreen.cpp.o
+
+ui/QuestionScreen.i: ui/QuestionScreen.cpp.i
+.PHONY : ui/QuestionScreen.i
+
+# target to preprocess a source file
+ui/QuestionScreen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.i
+.PHONY : ui/QuestionScreen.cpp.i
+
+ui/QuestionScreen.s: ui/QuestionScreen.cpp.s
+.PHONY : ui/QuestionScreen.s
+
+# target to generate assembly for a file
+ui/QuestionScreen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.s
+.PHONY : ui/QuestionScreen.cpp.s
+
+ui/ResultsScreen.o: ui/ResultsScreen.cpp.o
+.PHONY : ui/ResultsScreen.o
+
+# target to build an object file
+ui/ResultsScreen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o
+.PHONY : ui/ResultsScreen.cpp.o
+
+ui/ResultsScreen.i: ui/ResultsScreen.cpp.i
+.PHONY : ui/ResultsScreen.i
+
+# target to preprocess a source file
+ui/ResultsScreen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.i
+.PHONY : ui/ResultsScreen.cpp.i
+
+ui/ResultsScreen.s: ui/ResultsScreen.cpp.s
+.PHONY : ui/ResultsScreen.s
+
+# target to generate assembly for a file
+ui/ResultsScreen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.s
+.PHONY : ui/ResultsScreen.cpp.s
+
+ui/Screen.o: ui/Screen.cpp.o
+.PHONY : ui/Screen.o
+
+# target to build an object file
+ui/Screen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/Screen.cpp.o
+.PHONY : ui/Screen.cpp.o
+
+ui/Screen.i: ui/Screen.cpp.i
+.PHONY : ui/Screen.i
+
+# target to preprocess a source file
+ui/Screen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/Screen.cpp.i
+.PHONY : ui/Screen.cpp.i
+
+ui/Screen.s: ui/Screen.cpp.s
+.PHONY : ui/Screen.s
+
+# target to generate assembly for a file
+ui/Screen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/ui/Screen.cpp.s
+.PHONY : ui/Screen.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +306,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... carbonApp"
+	@echo "... Core/Calculator.o"
+	@echo "... Core/Calculator.i"
+	@echo "... Core/Calculator.s"
+	@echo "... Core/Profiles.o"
+	@echo "... Core/Profiles.i"
+	@echo "... Core/Profiles.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... ui/LoginScreen.o"
+	@echo "... ui/LoginScreen.i"
+	@echo "... ui/LoginScreen.s"
+	@echo "... ui/QuestionScreen.o"
+	@echo "... ui/QuestionScreen.i"
+	@echo "... ui/QuestionScreen.s"
+	@echo "... ui/ResultsScreen.o"
+	@echo "... ui/ResultsScreen.i"
+	@echo "... ui/ResultsScreen.s"
+	@echo "... ui/Screen.o"
+	@echo "... ui/Screen.i"
+	@echo "... ui/Screen.s"
 .PHONY : help
 
 

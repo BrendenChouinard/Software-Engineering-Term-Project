@@ -86,21 +86,117 @@ CMakeFiles/carbonApp.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/carbonApp.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maddiechouinard/Doucuments/Projects/carbonapp/main.cpp -o CMakeFiles/carbonApp.dir/main.cpp.s
 
+CMakeFiles/carbonApp.dir/ui/Screen.cpp.o: CMakeFiles/carbonApp.dir/flags.make
+CMakeFiles/carbonApp.dir/ui/Screen.cpp.o: /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/Screen.cpp
+CMakeFiles/carbonApp.dir/ui/Screen.cpp.o: CMakeFiles/carbonApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/carbonApp.dir/ui/Screen.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/carbonApp.dir/ui/Screen.cpp.o -MF CMakeFiles/carbonApp.dir/ui/Screen.cpp.o.d -o CMakeFiles/carbonApp.dir/ui/Screen.cpp.o -c /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/Screen.cpp
+
+CMakeFiles/carbonApp.dir/ui/Screen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/carbonApp.dir/ui/Screen.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/Screen.cpp > CMakeFiles/carbonApp.dir/ui/Screen.cpp.i
+
+CMakeFiles/carbonApp.dir/ui/Screen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/carbonApp.dir/ui/Screen.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/Screen.cpp -o CMakeFiles/carbonApp.dir/ui/Screen.cpp.s
+
+CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o: CMakeFiles/carbonApp.dir/flags.make
+CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o: /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/LoginScreen.cpp
+CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o: CMakeFiles/carbonApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o -MF CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o.d -o CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o -c /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/LoginScreen.cpp
+
+CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/LoginScreen.cpp > CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.i
+
+CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/LoginScreen.cpp -o CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.s
+
+CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o: CMakeFiles/carbonApp.dir/flags.make
+CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o: /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/QuestionScreen.cpp
+CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o: CMakeFiles/carbonApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o -MF CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o.d -o CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o -c /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/QuestionScreen.cpp
+
+CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/QuestionScreen.cpp > CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.i
+
+CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/QuestionScreen.cpp -o CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.s
+
+CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o: CMakeFiles/carbonApp.dir/flags.make
+CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o: /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/ResultsScreen.cpp
+CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o: CMakeFiles/carbonApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o -MF CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o.d -o CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o -c /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/ResultsScreen.cpp
+
+CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/ResultsScreen.cpp > CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.i
+
+CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maddiechouinard/Doucuments/Projects/carbonapp/ui/ResultsScreen.cpp -o CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.s
+
+CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o: CMakeFiles/carbonApp.dir/flags.make
+CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o: /Users/maddiechouinard/Doucuments/Projects/carbonapp/Core/Calculator.cpp
+CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o: CMakeFiles/carbonApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o -MF CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o.d -o CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o -c /Users/maddiechouinard/Doucuments/Projects/carbonapp/Core/Calculator.cpp
+
+CMakeFiles/carbonApp.dir/Core/Calculator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/carbonApp.dir/Core/Calculator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maddiechouinard/Doucuments/Projects/carbonapp/Core/Calculator.cpp > CMakeFiles/carbonApp.dir/Core/Calculator.cpp.i
+
+CMakeFiles/carbonApp.dir/Core/Calculator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/carbonApp.dir/Core/Calculator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maddiechouinard/Doucuments/Projects/carbonapp/Core/Calculator.cpp -o CMakeFiles/carbonApp.dir/Core/Calculator.cpp.s
+
+CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o: CMakeFiles/carbonApp.dir/flags.make
+CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o: /Users/maddiechouinard/Doucuments/Projects/carbonapp/Core/Profiles.cpp
+CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o: CMakeFiles/carbonApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o -MF CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o.d -o CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o -c /Users/maddiechouinard/Doucuments/Projects/carbonapp/Core/Profiles.cpp
+
+CMakeFiles/carbonApp.dir/Core/Profiles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/carbonApp.dir/Core/Profiles.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maddiechouinard/Doucuments/Projects/carbonapp/Core/Profiles.cpp > CMakeFiles/carbonApp.dir/Core/Profiles.cpp.i
+
+CMakeFiles/carbonApp.dir/Core/Profiles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/carbonApp.dir/Core/Profiles.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maddiechouinard/Doucuments/Projects/carbonapp/Core/Profiles.cpp -o CMakeFiles/carbonApp.dir/Core/Profiles.cpp.s
+
 # Object files for target carbonApp
 carbonApp_OBJECTS = \
-"CMakeFiles/carbonApp.dir/main.cpp.o"
+"CMakeFiles/carbonApp.dir/main.cpp.o" \
+"CMakeFiles/carbonApp.dir/ui/Screen.cpp.o" \
+"CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o" \
+"CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o" \
+"CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o" \
+"CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o" \
+"CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o"
 
 # External object files for target carbonApp
 carbonApp_EXTERNAL_OBJECTS =
 
 carbonApp: CMakeFiles/carbonApp.dir/main.cpp.o
+carbonApp: CMakeFiles/carbonApp.dir/ui/Screen.cpp.o
+carbonApp: CMakeFiles/carbonApp.dir/ui/LoginScreen.cpp.o
+carbonApp: CMakeFiles/carbonApp.dir/ui/QuestionScreen.cpp.o
+carbonApp: CMakeFiles/carbonApp.dir/ui/ResultsScreen.cpp.o
+carbonApp: CMakeFiles/carbonApp.dir/Core/Calculator.cpp.o
+carbonApp: CMakeFiles/carbonApp.dir/Core/Profiles.cpp.o
 carbonApp: CMakeFiles/carbonApp.dir/build.make
 carbonApp: /opt/homebrew/lib/libtgui.1.11.0.dylib
 carbonApp: /opt/homebrew/lib/libsfml-graphics.3.0.2.dylib
 carbonApp: /opt/homebrew/lib/libsfml-window.3.0.2.dylib
 carbonApp: /opt/homebrew/lib/libsfml-system.3.0.2.dylib
 carbonApp: CMakeFiles/carbonApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable carbonApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable carbonApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/carbonApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

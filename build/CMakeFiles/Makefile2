@@ -85,12 +85,12 @@ clean: CMakeFiles/carbonApp.dir/clean
 CMakeFiles/carbonApp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=1,2 "Built target carbonApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target carbonApp"
 .PHONY : CMakeFiles/carbonApp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/carbonApp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/carbonApp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles 0
 .PHONY : CMakeFiles/carbonApp.dir/rule
@@ -102,7 +102,7 @@ carbonApp: CMakeFiles/carbonApp.dir/rule
 # codegen rule for target.
 CMakeFiles/carbonApp.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/carbonApp.dir/build.make CMakeFiles/carbonApp.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=1,2 "Finished codegen for target carbonApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maddiechouinard/Doucuments/Projects/carbonapp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target carbonApp"
 .PHONY : CMakeFiles/carbonApp.dir/codegen
 
 # clean rule for target.
