@@ -12,7 +12,7 @@ int main()
     Create a profiles instance, add a profile, then delete the instance.
     Then create another instance and attempt to log in to the previously created profile.
     The created profile should persist as it was saved to disc.*/
-    profile_manager* user_profiles = new profile_manager();
+    /*profile_manager* user_profiles = new profile_manager();
     user_profiles->create_profile("Lewis", "mypassword");
     profile* my_profile = user_profiles->login("User", "mypassword");
     my_profile->add_carbon_source("Source", 15.5f);
@@ -29,9 +29,9 @@ int main()
     else {
         std::cerr << "Invalid Login" << std::endl;
     }
-    delete user_profiles;
+    delete user_profiles;*/
 
-    /*sf::RenderWindow window(sf::VideoMode({800, 600}), "Carbon Footprint Calculator");
+    sf::RenderWindow window(sf::VideoMode({800, 600}), "Carbon Footprint Calculator");
 
     tgui::Gui gui{ window };
 
@@ -123,5 +123,5 @@ int main()
         window.display();
     }
 
-    return 0;*/
+    return 0;
 }
