@@ -31,23 +31,37 @@ int main()
     }
     delete user_profiles;*/
 
-    sf::RenderWindow window(sf::VideoMode({800, 600}), "Carbon Footprint Calculator");
+    sf::RenderWindow mainWindow(sf::VideoMode({800, 800}), "Carbon Footprint Calculator");
 
-    tgui::Gui gui{ window };
+    tgui::Gui mainGui{ mainWindow };
 
-    auto root = tgui::Panel::create({ "100%", "100%" });
-    gui.add(root);
+    auto mainRoot = tgui::Panel::create({ "100%", "100%" });
+    mainGui.add(mainRoot);
+
+    mainRoot->loadWidgetsFromFile("../../../main.txt");
+
+
+
+    sf::RenderWindow loginWindow(sf::VideoMode({ 800, 800 }), "Carbon Footprint Calculator");
+
+    tgui::Gui loginGui{ loginWindow };
+
+    auto loginRoot = tgui::Panel::create({ "100%", "100%" });
+    loginGui.add(loginRoot);
+
+    bool loggedIn = false;
+
 
     auto title = tgui::Label::create("Carbon Footprint Calculator ");
     title->setPosition(250, 20);
     title->setTextSize(22);
-    root->add(title);
+    loginRoot->add(title);
 
     //creates a panel widget where login widgets go
     auto form = tgui::Panel::create({500, 260});
     //half of the width - panel width, half of the height - panel height (centered)
     form->setPosition("50% - 250", "50% - 130");
-    root->add(form);
+    loginRoot->add(form);
 
     //makes login header positioned to the side
     auto heading = tgui::Label::create("Login");
@@ -98,29 +112,112 @@ int main()
     forgotButton->setPosition(330, 170);
     form->add(forgotButton);
 
-
+    // load profiles
+    profile_manager currProfiles = profile_manager();
+    
+    // set default profile
+    profile* userProfile = nullptr;
 
     //presses buttons that we have created
-    loginButton->onPress([]{ std::cout << "Login not yet working."; });
-    createButton->onPress([&]{ std::cout << "create account not yet working."; });
-    forgotButton->onPress([&]{ std::cout << "password recovery not yet working"; });
+    loginButton->onPress([&]
+        {
+            // get username/password in std strings
+            tgui::String tempUsername = userEntry->getText();
+            std::string username = tempUsername.toStdString();
+            tgui::String tempPassword = passwordEntry->getText();
+            std::string password = tempPassword.toStdString();
+
+            // attempt login
+            userProfile = currProfiles.login(username, password);
+            
+            if (userProfile != nullptr) // success
+            {
+                loggedIn = true;
+                loginWindow.close();
+            }
+            else
+            {
+                auto failedMessage = tgui::MessageBox::create("Login failed", "Incorrect username or password", { "OK" });
+                loginGui.add(failedMessage);
+                // center
+                failedMessage->setPosition(300, 317);
+
+                // make it close
+                failedMessage->onButtonPress([failedMessage](const tgui::String& button){
+                    failedMessage->close();
+                });
+            }
+        });
+    createButton->onPress([&]
+        {
+            // get username/password in std strings
+            tgui::String tempUsername = userEntry->getText();
+            std::string username = tempUsername.toStdString();
+            tgui::String tempPassword = passwordEntry->getText();
+            std::string password = tempPassword.toStdString();
+
+            // attempt profile creation
+            bool profileCreationSuccess = currProfiles.create_profile(username, password);
+            if (profileCreationSuccess) // success
+            {
+                loggedIn = true;
+                loginWindow.close();
+            }
+            else
+            {
+                auto failedMessage = tgui::MessageBox::create("Profile creation failed", "Profiles with this username already exists", { "OK" });
+                loginGui.add(failedMessage);
+                // center
+                failedMessage->setPosition(300, 317);
+
+                // make it close
+                failedMessage->onButtonPress([failedMessage](const tgui::String& button) {
+                    failedMessage->close();
+                    });
+            }
+        });
+    forgotButton->onPress([&]
+        {
+            std::cout << "password recovery not yet working"; 
+        });
+
+
 
     //runs while the window is open
     //gives each event to TGUI to handle
-    while (window.isOpen())
+    while (mainWindow.isOpen())
     {
-        while (const std::optional<sf::Event> event = window.pollEvent())
+        
+        if (!loggedIn)
         {
-            gui.handleEvent(*event);
-            if (event->is<sf::Event::Closed>())
-                //closes window, exits loop
-                window.close();
-        }
+            while (const std::optional<sf::Event> event = loginWindow.pollEvent())
+            {
+                loginGui.handleEvent(*event);
+                if (event->is<sf::Event::Closed>())
+                    //closes window, exits loop
+                    mainWindow.close();
+            }
 
-        window.clear();
-        //renders window
-        gui.draw();
-        window.display();
+            loginWindow.clear();
+            //renders window
+            loginGui.draw();
+            loginWindow.display();
+        }
+        else
+        {
+            while (const std::optional<sf::Event> event = mainWindow.pollEvent())
+            {
+                mainGui.handleEvent(*event);
+                if (event->is<sf::Event::Closed>())
+                    //closes window, exits loop
+                    mainWindow.close();
+            }
+
+            mainWindow.clear();
+            //renders window
+            mainGui.draw();
+            mainWindow.display();
+        }
     }
 
     return 0;
