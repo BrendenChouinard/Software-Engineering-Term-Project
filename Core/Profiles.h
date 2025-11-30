@@ -10,7 +10,7 @@ private:
 	std::string username;
 	std::string password;
 
-	std::unordered_map<std::string, float> user_data;
+	std::unordered_map<std::string, std::string> user_data;
 
 	void write_string(std::ofstream& stream, const std::string& string);
 	void read_string(std::ifstream& stream, std::string& string);
@@ -24,8 +24,8 @@ private:
 public:
 	const std::string& get_username();
 	const std::string& get_password();
-	void add_carbon_source(const std::string& source, const float& amount);
-	float get_carbon_from_source(const std::string& source);
+	void update_carbon_source(const std::string& source, const std::string& value);
+	std::string get_carbon_from_source(const std::string& source);
 
 	friend class profile_manager;
 };

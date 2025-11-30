@@ -3,6 +3,7 @@
 #include <TGUI/Backend/SFML-Graphics.hpp>
 
 #include <iostream>
+#include <vector>
 
 #include "Core/Profiles.h"
 
@@ -132,6 +133,21 @@ int main()
             
             if (userProfile != nullptr) // success
             {
+                // load data into main edit boxes
+                // for each widget
+                for (auto& widget : mainRoot->get<tgui::ScrollablePanel>("MainDataEntryPanel")->getWidgets())
+                {
+                    // if it is an editbox
+                    if (auto edit = widget->cast<tgui::EditBox>())
+                    {
+                        // get update value at box
+                        tgui::String boxName = edit->getWidgetName();
+                        std::string mapKey = boxName.toStdString();
+                        edit->setText(userProfile->get_carbon_from_source(mapKey));
+                    }
+                }
+
+                // set logged in, and close login window
                 loggedIn = true;
                 loginWindow.close();
             }
@@ -182,6 +198,12 @@ int main()
         });
 
 
+    // load data function
+    std::vector<tgui::EditBox::Ptr> inputBoxes;
+
+
+
+
 
     //runs while the window is open
     //gives each event to TGUI to handle
@@ -213,6 +235,24 @@ int main()
                     mainWindow.close();
             }
 
+            // for each widget
+            for (auto& widget : mainRoot->get<tgui::ScrollablePanel>("MainDataEntryPanel")->getWidgets())
+            {
+                // if it is an editbox
+                if (auto edit = widget->cast<tgui::EditBox>())
+                {
+                    // get box name
+                    tgui::String boxName = edit->getWidgetName();
+                    std::string mapKey = boxName.toStdString();
+
+                    // get data
+                    tgui::String boxValue = edit->getText();
+                    std::string mapValue = boxValue.toStdString();
+
+                    userProfile->update_carbon_source(mapKey, mapValue);
+                }
+            }
+
             mainWindow.clear();
             //renders window
             mainGui.draw();
@@ -222,3 +262,26 @@ int main()
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Make it so that when loading, the data goes into the right spots in the fields
+// 
+// Make it so that every loop of the rendering updates current data based on entry fields
+// 
+// Calculate Carbon from each source
+// 
+// Sum carbon from sections
+// 
+// make graph(s)
