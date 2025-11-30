@@ -32,7 +32,7 @@ int main()
     }
     delete user_profiles;*/
 
-    sf::RenderWindow mainWindow(sf::VideoMode({800, 800}), "Carbon Footprint Calculator");
+    sf::RenderWindow mainWindow(sf::VideoMode({800, 1000}), "Carbon Footprint Calculator");
 
     tgui::Gui mainGui{ mainWindow };
 
@@ -98,20 +98,14 @@ int main()
     //login button
     auto loginButton = tgui::Button::create("Login");
     loginButton->setSize(120, 36);
-    loginButton->setPosition(20, 170);
+    loginButton->setPosition(60, 170);
     form->add(loginButton);
 
     //create account button
     auto createButton = tgui::Button::create("Create Account");
     createButton->setSize(160, 36);
-    createButton->setPosition(160, 170);
+    createButton->setPosition(250, 170);
     form->add(createButton);
-
-    //forgot password button
-    auto forgotButton = tgui::Button::create("Forgot Password");
-    forgotButton->setSize(160, 36);
-    forgotButton->setPosition(330, 170);
-    form->add(forgotButton);
 
     // load profiles
     profile_manager currProfiles = profile_manager();
@@ -192,17 +186,6 @@ int main()
                     });
             }
         });
-    forgotButton->onPress([&]
-        {
-            std::cout << "password recovery not yet working"; 
-        });
-
-
-    // load data function
-    std::vector<tgui::EditBox::Ptr> inputBoxes;
-
-
-
 
 
     //runs while the window is open
@@ -266,20 +249,6 @@ int main()
 
 
 
-
-
-
-
-
-
-
-
-
-
-// Make it so that when loading, the data goes into the right spots in the fields
-// 
-// Make it so that every loop of the rendering updates current data based on entry fields
-// 
 // Calculate Carbon from each source
 // 
 // Sum carbon from sections
