@@ -170,6 +170,7 @@ int main()
             bool profileCreationSuccess = currProfiles.create_profile(username, password);
             if (profileCreationSuccess) // success
             {
+                userProfile = currProfiles.login(username, password);
                 loggedIn = true;
                 loginWindow.close();
             }
@@ -217,6 +218,11 @@ int main()
                     //closes window, exits loop
                     mainWindow.close();
             }
+
+            auto panel = mainRoot->get<tgui::ScrollablePanel>("MainDataEntryPanel");
+
+            if (!panel)
+                std::cout << "Panel not found\n";
 
             // for each widget
             for (auto& widget : mainRoot->get<tgui::ScrollablePanel>("MainDataEntryPanel")->getWidgets())
