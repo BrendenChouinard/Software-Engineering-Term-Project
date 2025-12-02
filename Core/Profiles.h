@@ -27,6 +27,7 @@ public:
 	const std::string& get_password();
 	bool update_carbon_source(const std::string& source, const std::string& value);
 	std::string get_carbon_from_source(const std::string& source);
+	const std::unordered_map<std::string, std::string>& get_all_carbon_sources();
 
 	friend class profile_manager;
 };

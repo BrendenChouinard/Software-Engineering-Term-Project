@@ -246,7 +246,7 @@ int main()
             }
 
             if (valuesChanged) {
-                // call calculator.calculate here. Pass the values from the userData map
+                calculator.calculate(userProfile->get_all_carbon_sources());
             }
 
             mainWindow.clear();

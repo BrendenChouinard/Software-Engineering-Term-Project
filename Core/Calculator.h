@@ -55,14 +55,14 @@ private:
 	};
 
 	std::unordered_map<std::string, float> values;
-	float sum;
+	float sum = 0.0f;
 	std::unordered_map<std::string, float> percentages;
 
 	std::unordered_map<std::string, float> groupValues;
 	std::unordered_map<std::string, float> groupPercentages;
 
 public:
-	bool calculate(std::unordered_map<std::string, int> parameters);
+	bool calculate(const std::unordered_map<std::string, std::string>& parameters);
 
 	const std::unordered_map<std::string, float>& get_values();
 	const float& get_sum();

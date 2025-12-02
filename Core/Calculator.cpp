@@ -1,5 +1,7 @@
 #include "Calculator.h"
 
+#include <stdexcept>
+
 /**
 * Updates the stored values and percentages with the values calculated from the specified sources. Will do nothing if sources are missing.
 * 
@@ -7,7 +9,7 @@
 * 
 * Returns: true if all required sources were provided, false otherwise.
 */
-bool calculator::calculate(std::unordered_map<std::string, int> parameters)
+bool calculator::calculate(const std::unordered_map<std::string, std::string>& parameters)
 {
 	if (parameters.size() != weights.size()) return false;
 
@@ -16,7 +18,16 @@ bool calculator::calculate(std::unordered_map<std::string, int> parameters)
 	std::unordered_map<std::string, float> newValues;
 	for (const auto& pair : weights) {
 		if (parameters.find(pair.first) == parameters.end()) return false; // the parameters aren't full
-		float product = pair.second * parameters[pair.first];
+		int value;
+		try {
+			value = std::stoi(parameters.at(pair.first));
+		}
+		catch (const std::invalid_argument& e) {
+			return false;
+		}
+		
+		if (value < 0) return false;
+		float product = pair.second * value;
 		newValues[pair.first] = product;
 		total += product;
 	}
