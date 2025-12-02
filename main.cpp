@@ -224,6 +224,7 @@ int main()
             if (!panel)
                 std::cout << "Panel not found\n";
 
+            bool valuesChanged = false;
             // for each widget
             for (auto& widget : mainRoot->get<tgui::ScrollablePanel>("MainDataEntryPanel")->getWidgets())
             {
@@ -238,9 +239,10 @@ int main()
                     tgui::String boxValue = edit->getText();
                     std::string mapValue = boxValue.toStdString();
 
-                    userProfile->update_carbon_source(mapKey, mapValue);
+                    if (userProfile->update_carbon_source(mapKey, mapValue)) valuesChanged = true;
                 }
             }
+
 
             mainWindow.clear();
             //renders window

@@ -1,10 +1,11 @@
+#ifndef PROFILES_H
+#define PROFILES_H
+
 #include <string>
 #include <utility>
 #include <unordered_map>
 #include <fstream>
 
-#ifndef PROFILES_H
-#define PROFILES_H
 class profile {
 private:
 	std::string username;
@@ -24,7 +25,7 @@ private:
 public:
 	const std::string& get_username();
 	const std::string& get_password();
-	void update_carbon_source(const std::string& source, const std::string& value);
+	bool update_carbon_source(const std::string& source, const std::string& value);
 	std::string get_carbon_from_source(const std::string& source);
 
 	friend class profile_manager;
@@ -51,5 +52,6 @@ public:
 
 	 ~profile_manager();
 };
-#endif //PROFILES_H
+
+#endif PROFILES_H
 
