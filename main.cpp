@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "Core/Profiles.h"
+#include "Core/Calculator.h"
 
 int main()
 {
@@ -188,6 +189,7 @@ int main()
             }
         });
 
+    calculator calculator;
 
     //runs while the window is open
     //gives each event to TGUI to handle
@@ -243,6 +245,9 @@ int main()
                 }
             }
 
+            if (valuesChanged) {
+                // call calculator.calculate here. Pass the values from the userData map
+            }
 
             mainWindow.clear();
             //renders window
