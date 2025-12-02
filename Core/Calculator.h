@@ -28,11 +28,38 @@ private:
 		{"RiceInput", 4.545f},
 		{"FruitInput", 1.1089252f},
 		{"VegetableInput", 0.563f}
-	};;
+	};
+
+	const std::unordered_map<std::string, std::string> groups = {
+		{"GasUsageInput", "travel"},
+		{"WalkingInput", "travel"},
+		{"BusInput", "travel"},
+		{"BikeInput", "travel"},
+		{"FlyingInput", "travel"},
+
+		{"HousePowerInput", "energy"},
+		{"NaturalGasInput", "energy"},
+
+		{"BottledWaterInput", "water"},
+		{"TapWaterInput", "water"},
+		{"ShowerCountInput", "water"},
+
+		{"BeefInput", "food"},
+		{"PorkInput", "food"},
+		{"ChickenInput", "food"},
+		{"MuttonInput", "food"},
+		{"BreadInput", "food"},
+		{"RiceInput", "food"},
+		{"FruitInput", "food"},
+		{"VegetableInput", "food"}
+	};
 
 	std::unordered_map<std::string, float> values;
 	float sum;
 	std::unordered_map<std::string, float> percentages;
+
+	std::unordered_map<std::string, float> groupValues;
+	std::unordered_map<std::string, float> groupPercentages;
 
 public:
 	bool calculate(std::unordered_map<std::string, int> parameters);

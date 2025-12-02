@@ -23,10 +23,18 @@ bool calculator::calculate(std::unordered_map<std::string, int> parameters)
 	values = newValues;
 	sum = total;
 
-	// calculate percentages
+	// calculate groups & percentages
 	percentages.clear();
 	for (const auto& pair : values) {
-		percentages[pair.first] = ((float)pair.second) / sum;
+		std::string group = groups.at(pair.first);
+		groupValues[group] += pair.second;
+
+		percentages[pair.first] = pair.second / sum;
+	}
+
+	// calculate group percentages
+	for (const auto& pair : groupValues) {
+		groupPercentages[pair.first] = pair.second / sum;
 	}
 
 	return true;
