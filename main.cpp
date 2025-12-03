@@ -203,6 +203,8 @@ int main()
     //gives each event to TGUI to handle
     while (mainWindow.isOpen())
     {
+
+        mainWindow.setSize(tgui::Vector2u(800, 1000));
         
         if (!loggedIn)
         {
