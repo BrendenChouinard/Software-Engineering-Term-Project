@@ -35,7 +35,7 @@ void profile::save_to_file(std::ofstream& stream)
 	stream.write(reinterpret_cast<const char*>(&length), sizeof(length));
 	for (const auto& pair : user_data) {
 		write_string(stream, pair.first);
-		write_string(stream, pair.second);
+		stream.write(reinterpret_cast<const char*>(&pair.second), sizeof(pair.second));
 	}
 }
 
@@ -48,11 +48,11 @@ void profile::load_from_file(std::ifstream& stream)
 	stream.read(reinterpret_cast<char*>(&length), sizeof(length));
 	for (decltype(length) i = 0; i < length; i++) {
 		std::string carbon_source;
-		std::string value;
+		float value;
 		read_string(stream, carbon_source);
-		read_string(stream, value);
+		stream.read(reinterpret_cast<char*>(&value), sizeof(value));
 
-		update_carbon_source(carbon_source, value);
+		add_carbon_source(carbon_source, value);
 	}
 }
 
@@ -67,18 +67,13 @@ const std::string& profile::get_password()
 }
 
 /** 
-* Updates a source of carbon for this user.
+* Defines a new source of carbon for this user.
 * 
-* Arguments: name of the input source and a value.
-* 
-* Returns: true if the value changed, false otherwise.
+* Arguments: name of the carbon source and an amount.
 */
-bool profile::update_carbon_source(const std::string& source, const std::string& value)
+void profile::add_carbon_source(const std::string& source, const float& amount)
 {
-	if (user_data.find(source) != user_data.end() && user_data[source] == value) return false;
-
-	user_data.insert_or_assign(source, value);
-	return true;
+	user_data.emplace(source, amount);
 }
 
 /**
@@ -88,17 +83,11 @@ bool profile::update_carbon_source(const std::string& source, const std::string&
 * 
 * Returns: the amount of carbon produced from this source (defaults to 0).
 */
-std::string profile::get_carbon_from_source(const std::string& source)
+float profile::get_carbon_from_source(const std::string& source)
 {
 	if (user_data.contains(source)) return user_data.at(source);
 
-	return "";
-}
-
-
-std::unordered_map<std::string, std::string>& profile::getParameters()
-{
-	return user_data;
+	return 0.0f;
 }
 
 profile::profile()

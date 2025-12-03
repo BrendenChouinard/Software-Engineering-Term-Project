@@ -1,4 +1,4 @@
-d# Install script for directory: /Users/maddiechouinard/Doucuments/Projects/carbonApp
+# Install script for directory: /Users/maddiechouinard/Doucuments/Projects/carbonApp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
