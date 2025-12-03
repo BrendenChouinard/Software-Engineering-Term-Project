@@ -21,7 +21,9 @@ add_executable(carbonApp main.cpp
         Core/Calculator.cpp
         Core/Profiles.h
         Core/Profiles.cpp
-        Core/StateOfApp.h)
+        Core/StateOfApp.h
+        ui/IntegerEntry.h
+        ui/ExclusiveButtonGroup.h)
 
 target_link_libraries(carbonApp PRIVATE
         TGUI::TGUI

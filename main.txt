@@ -47,10 +47,10 @@ Renderer.2 {
 }
 
 ScrollablePanel.MainDataEntryPanel {
-    ContentSize = (800, 1230);
+    ContentSize = (800, 1500);
     HorizontalScrollbarPolicy = Never;
     Position = (0, 40);
-    Size = (800, 600);
+    Size = (800, 760);
     VerticalScrollbarPolicy = Automatic;
 
     Renderer {
@@ -82,7 +82,7 @@ ScrollablePanel.MainDataEntryPanel {
     Label.TravelLabel {
         MaximumTextWidth = 380;
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (800, 40);
         Text = "Energy use for travelling";
         TextSize = 30;
@@ -93,7 +93,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 380;
         Position = (0, 310);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (800, 40);
         Text = "Energy use at home";
         TextSize = 30;
@@ -104,7 +104,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 380;
         Position = (0, 460);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (800, 40);
         Text = "Water usage";
         TextSize = 30;
@@ -115,7 +115,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 380;
         Position = (0, 750);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (800, 40);
         Text = "Eating habits";
         TextSize = 30;
@@ -126,7 +126,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 50);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many gallons of gasoline you use each month?";
         TextSize = 16;
@@ -146,7 +146,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 100);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many miles you walk each month?";
         TextSize = 16;
@@ -166,7 +166,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 150);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many miles you travel by bus each month?";
         TextSize = 16;
@@ -186,7 +186,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 200);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many miles you travel by bike each month?";
         TextSize = 16;
@@ -206,7 +206,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 250);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many miles you travel by plane each month?";
         TextSize = 16;
@@ -226,7 +226,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 350);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many Kilowatt-hours does your household use each month?";
         TextSize = 16;
@@ -246,7 +246,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 400);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many cubic feet of natural gas does your household use each month?";
         TextSize = 16;
@@ -268,7 +268,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 800;
         Position = (0, 500);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many gallons of bottled water do you drink each month?";
         TextSize = 16;
@@ -280,7 +280,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 800;
         Position = (0, 520);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "(A gallon is almost eight normal 16.8 oz water bottles)";
         TextSize = 16;
@@ -302,7 +302,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 800;
         Position = (0, 570);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many gallons of tap water do you use each month?";
         TextSize = 16;
@@ -324,7 +324,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 800;
         Position = (0, 620);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many times do you shower each month?";
         TextSize = 16;
@@ -346,7 +346,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 800;
         Position = (0, 670);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how long do you have the water turned on while showering?";
         TextSize = 16;
@@ -363,188 +363,12 @@ ScrollablePanel.MainDataEntryPanel {
         TextSize = 13;
         UserData = "";
     }
-
-    Label.BeefLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 800);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of beef do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.BeefInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 821);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.PorkLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 850);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of pork do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.PorkInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 871);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.ChickenLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 900);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of chicken do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.ChickenInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 921);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.MuttonLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 950);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of mutton do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.MuttonInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 971);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.BreadLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 1000);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many loaves of bread do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.BreadInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 1021);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.RiceLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 1050);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of rice do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.RiceInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 1071);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.FruitLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 1100);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of fruit do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.FruitInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 1121);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.VegetableLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 1150);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of vegetables do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.VegetableInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 1171);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
 }
 
 Label.MainLabel {
     HorizontalAlignment = Center;
     Renderer = &1;
-    ScrollbarPolicy = Never;
+    ScrollbarPolicy = Automatic;
     Size = (800, 40);
     Text = "Calculate your carbon footprint easily!";
     TextSize = 31;
