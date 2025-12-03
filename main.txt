@@ -533,16 +533,16 @@ Panel.GraphPanel {
 
     Label.GraphLabel {
         Renderer = &1;
-        ScrollbarPolicy = Automatic;
+        ScrollbarPolicy = Never;
         Size = (258, 40);
         Text = "Carbon Footprint";
         TextSize = 30;
     }
 
     Label.PercentGraphLabel {
-        Position = (447, 0);
+        Position = (445, 0);
         Renderer = &1;
-        ScrollbarPolicy = Automatic;
+        ScrollbarPolicy = Never;
         Size = (353, 40);
         Text = "Percentage Breakdown";
         TextSize = 30;
@@ -558,5 +558,525 @@ Panel.GraphPanel {
         Position = (399, 40);
         Renderer = &3;
         Size = (400, 361);
+    }
+
+    Label."Unit Label 1" {
+        HorizontalAlignment = Center;
+        Position = (0, 40);
+        Renderer = &1;
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = 100;
+        TextSize = 15;
+    }
+
+    Label."Unit Label 2" {
+        HorizontalAlignment = Center;
+        Position = (0, 125);
+        Renderer = &1;
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = 75;
+        TextSize = 15;
+    }
+
+    Label."Unit Label 3" {
+        HorizontalAlignment = Center;
+        Position = (0, 210);
+        Renderer = &1;
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = 50;
+        TextSize = 15;
+    }
+
+    Label."Unit Label 4" {
+        HorizontalAlignment = Center;
+        Position = (0, 295);
+        Renderer = &1;
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = 25;
+        TextSize = 15;
+    }
+
+    Label.unitLabel1 {
+        HorizontalAlignment = Center;
+        Position = (0, 340);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = "Lbs of";
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label.unitLabel2 {
+        HorizontalAlignment = Center;
+        Position = (0, 360);
+        Renderer = &1;
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Carbon;
+        TextSize = 15;
+    }
+
+    Label.unitLabel3 {
+        HorizontalAlignment = Center;
+        Position = (0, 380);
+        Renderer = &1;
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Dioxide;
+        TextSize = 15;
+    }
+
+    Label.travelBarLabel1 {
+        HorizontalAlignment = Center;
+        Position = (80, 380);
+        Renderer = &1;
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Travel;
+        TextSize = 15;
+    }
+
+    Label.homeBarLabel1 {
+        HorizontalAlignment = Center;
+        Position = (160, 380);
+        Renderer = &1;
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Home;
+        TextSize = 15;
+    }
+
+    Label.waterBarLabel1 {
+        HorizontalAlignment = Center;
+        Position = (240, 380);
+        Renderer = &1;
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Water;
+        TextSize = 15;
+    }
+
+    Label.foodBarLabel1 {
+        HorizontalAlignment = Center;
+        Position = (320, 380);
+        Renderer = &1;
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Food;
+        TextSize = 15;
+    }
+
+    Label."Percent Unit Label 1" {
+        HorizontalAlignment = Center;
+        Position = (400, 40);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = 100%;
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label."Percent Unit Label 2" {
+        HorizontalAlignment = Center;
+        Position = (400, 125);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = 75%;
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label."Percent Unit Label 3" {
+        HorizontalAlignment = Center;
+        Position = (400, 210);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = 50%;
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label."Percent Unit Label 4" {
+        HorizontalAlignment = Center;
+        Position = (400, 295);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = 25%;
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label.percentUnitLabel1 {
+        HorizontalAlignment = Center;
+        Position = (400, 340);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = "Lbs of";
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label.percentUnitLabel2 {
+        HorizontalAlignment = Center;
+        Position = (400, 360);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Carbon;
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label.percentUnitLabel3 {
+        HorizontalAlignment = Center;
+        Position = (400, 380);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Dioxide;
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label.travelBarLabel2 {
+        HorizontalAlignment = Center;
+        Position = (480, 380);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Travel;
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label.homeBarLabel2 {
+        HorizontalAlignment = Center;
+        Position = (560, 380);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Home;
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label.waterBarLabel2 {
+        HorizontalAlignment = Center;
+        Position = (640, 380);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Water;
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
+    }
+
+    Label.foodBarLabel2 {
+        HorizontalAlignment = Center;
+        Position = (720, 380);
+        ScrollbarPolicy = Never;
+        Size = (80, 20);
+        Text = Food;
+        TextSize = 15;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BorderColor = #3C3C3C;
+            Borders = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureBackground = None;
+
+            Scrollbar {
+                ArrowBackgroundColor = #F5F5F5;
+                ArrowBackgroundColorHover = white;
+                ArrowColor = #3C3C3C;
+                ArrowColorHover = black;
+                TextureArrowDown = None;
+                TextureArrowDownHover = None;
+                TextureArrowUp = None;
+                TextureArrowUpHover = None;
+                TextureThumb = None;
+                TextureThumbHover = None;
+                TextureTrack = None;
+                TextureTrackHover = None;
+                ThumbColor = #DCDCDC;
+                ThumbColorHover = #E6E6E6;
+                TrackColor = #F5F5F5;
+            }
+        }
     }
 }

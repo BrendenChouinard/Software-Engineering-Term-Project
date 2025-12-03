@@ -95,6 +95,13 @@ std::string profile::get_carbon_from_source(const std::string& source)
 	return "";
 }
 
+
+std::unordered_map<std::string, std::string> profile::getParameters()
+{
+	return user_data;
+}
+
+
 profile::profile()
 {
 }

@@ -7,7 +7,7 @@
 * 
 * Returns: true if all required sources were provided, false otherwise.
 */
-bool calculator::calculate(std::unordered_map<std::string, int> parameters)
+bool calculator::calculate(std::unordered_map<std::string, std::string> parameters)
 {
 	if (parameters.size() != weights.size()) return false;
 
@@ -15,8 +15,12 @@ bool calculator::calculate(std::unordered_map<std::string, int> parameters)
 	int total = 0;
 	std::unordered_map<std::string, float> newValues;
 	for (const auto& pair : weights) {
+		float product = 0.0f;
 		if (parameters.find(pair.first) == parameters.end()) return false; // the parameters aren't full
-		float product = pair.second * parameters[pair.first];
+		if (parameters[pair.first] != "")
+		{
+			product = pair.second * std::stoi(parameters[pair.first]);
+		}
 		newValues[pair.first] = product;
 		total += product;
 	}
@@ -45,4 +49,9 @@ const float& calculator::get_sum()
 const std::unordered_map<std::string, float>& calculator::get_percentages()
 {
 	return percentages;
+}
+
+calculator::calculator()
+{
+	sum = 0.0f;
 }
