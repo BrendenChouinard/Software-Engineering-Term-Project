@@ -5,5 +5,3 @@
 /.vs
 /out/build/x64-Debug
 /CMakeSettings.json
-#/CMakeLists.txt
-#/CMakeLists.txt

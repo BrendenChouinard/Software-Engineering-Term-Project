@@ -46,17 +46,11 @@ Renderer.2 {
     TextureHover = None;
 }
 
-Renderer.3 {
-    BackgroundColor = rgba(180, 180, 180, 215);
-    BorderColor = rgba(240, 240, 240, 215);
-    Borders = 1;
-    TextureBackground = None;
-}
-
 ScrollablePanel.MainDataEntryPanel {
-    ContentSize = (800, 1150);
+    ContentSize = (800, 1500);
     HorizontalScrollbarPolicy = Never;
-    Size = (800, 600);
+    Position = (0, 40);
+    Size = (800, 760);
     VerticalScrollbarPolicy = Automatic;
 
     Renderer {
@@ -88,7 +82,7 @@ ScrollablePanel.MainDataEntryPanel {
     Label.TravelLabel {
         MaximumTextWidth = 380;
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (800, 40);
         Text = "Energy use for travelling";
         TextSize = 30;
@@ -99,7 +93,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 380;
         Position = (0, 310);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (800, 40);
         Text = "Energy use at home";
         TextSize = 30;
@@ -110,7 +104,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 380;
         Position = (0, 460);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (800, 40);
         Text = "Water usage";
         TextSize = 30;
@@ -119,9 +113,9 @@ ScrollablePanel.MainDataEntryPanel {
 
     Label.EatingLabel {
         MaximumTextWidth = 380;
-        Position = (0, 690);
+        Position = (0, 750);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (800, 40);
         Text = "Eating habits";
         TextSize = 30;
@@ -132,7 +126,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 50);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many gallons of gasoline you use each month?";
         TextSize = 16;
@@ -152,7 +146,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 100);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many miles you walk each month?";
         TextSize = 16;
@@ -172,7 +166,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 150);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many miles you travel by bus each month?";
         TextSize = 16;
@@ -192,7 +186,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 200);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many miles you travel by bike each month?";
         TextSize = 16;
@@ -212,7 +206,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 250);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many miles you travel by plane each month?";
         TextSize = 16;
@@ -232,7 +226,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 350);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many Kilowatt-hours does your household use each month?";
         TextSize = 16;
@@ -252,7 +246,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 700;
         Position = (0, 400);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many cubic feet of natural gas does your household use each month?";
         TextSize = 16;
@@ -274,7 +268,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 800;
         Position = (0, 500);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many gallons of bottled water do you drink each month?";
         TextSize = 16;
@@ -286,7 +280,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 800;
         Position = (0, 520);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "(A gallon is almost eight normal 16.8 oz water bottles)";
         TextSize = 16;
@@ -308,7 +302,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 800;
         Position = (0, 570);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many gallons of tap water do you use each month?";
         TextSize = 16;
@@ -330,7 +324,7 @@ ScrollablePanel.MainDataEntryPanel {
         MaximumTextWidth = 800;
         Position = (0, 620);
         Renderer = &1;
-        ScrollbarPolicy = Never;
+        ScrollbarPolicy = Automatic;
         Size = (700, 21);
         Text = "Roughly how many times do you shower each month?";
         TextSize = 16;
@@ -348,176 +342,22 @@ ScrollablePanel.MainDataEntryPanel {
         UserData = "";
     }
 
-    Label.BeefLabel {
+    Label.ShowerDurationLabel {
         MaximumTextWidth = 800;
-        Position = (0, 740);
+        Position = (0, 670);
         Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of beef do you eat per month?";
+        ScrollbarPolicy = Automatic;
+        Size = (700, 21);
+        Text = "Roughly how long do you have the water turned on while showering?";
         TextSize = 16;
         UserData = "";
         VerticalAlignment = Center;
     }
 
-    EditBox.BeefInput {
+    EditBox.ShowerDurationInput {
         DefaultText = 0;
         InputValidator = UInt;
-        Position = (0, 761);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.PorkLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 790);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of pork do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.PorkInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 811);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.ChickenLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 840);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of chicken do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.ChickenInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 861);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.MuttonLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 890);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of mutton do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.MuttonInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 911);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.BreadLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 940);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many loaves of bread do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.BreadInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 961);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.RiceLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 990);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of rice do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.RiceInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 1011);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.FruitLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 1040);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of fruit do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.FruitInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 1061);
-        Renderer = &2;
-        Size = (150, 21);
-        TextSize = 13;
-        UserData = "";
-    }
-
-    Label.VegetableLabel {
-        MaximumTextWidth = 800;
-        Position = (0, 1090);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (697, 21);
-        Text = "Roughly how many pounds of vegetables do you eat per month?";
-        TextSize = 16;
-        UserData = "";
-        VerticalAlignment = Center;
-    }
-
-    EditBox.VegetableInput {
-        DefaultText = 0;
-        InputValidator = UInt;
-        Position = (0, 1111);
+        Position = (0, 691);
         Renderer = &2;
         Size = (150, 21);
         TextSize = 13;
@@ -525,558 +365,12 @@ ScrollablePanel.MainDataEntryPanel {
     }
 }
 
-Panel.GraphPanel {
-    IgnoreMouseEvents = true;
-    Position = (0, 598);
-    Renderer = &3;
-    Size = (800, 401);
-
-    Label.GraphLabel {
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (258, 40);
-        Text = "Carbon Footprint";
-        TextSize = 30;
-    }
-
-    Label.PercentGraphLabel {
-        Position = (445, 0);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (353, 40);
-        Text = "Percentage Breakdown";
-        TextSize = 30;
-    }
-
-    Panel.graphPanel {
-        Position = (-1, 40);
-        Renderer = &3;
-        Size = (400, 361);
-    }
-
-    Panel.percentGraphPanel {
-        Position = (399, 40);
-        Renderer = &3;
-        Size = (400, 361);
-    }
-
-    Label."Unit Label 1" {
-        HorizontalAlignment = Center;
-        Position = (0, 40);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = 100;
-        TextSize = 15;
-    }
-
-    Label."Unit Label 2" {
-        HorizontalAlignment = Center;
-        Position = (0, 125);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = 75;
-        TextSize = 15;
-    }
-
-    Label."Unit Label 3" {
-        HorizontalAlignment = Center;
-        Position = (0, 210);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = 50;
-        TextSize = 15;
-    }
-
-    Label."Unit Label 4" {
-        HorizontalAlignment = Center;
-        Position = (0, 295);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = 25;
-        TextSize = 15;
-    }
-
-    Label.unitLabel1 {
-        HorizontalAlignment = Center;
-        Position = (0, 340);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = "Lbs of";
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label.unitLabel2 {
-        HorizontalAlignment = Center;
-        Position = (0, 360);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Carbon;
-        TextSize = 15;
-    }
-
-    Label.unitLabel3 {
-        HorizontalAlignment = Center;
-        Position = (0, 380);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Dioxide;
-        TextSize = 15;
-    }
-
-    Label.travelBarLabel1 {
-        HorizontalAlignment = Center;
-        Position = (80, 380);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Travel;
-        TextSize = 15;
-    }
-
-    Label.homeBarLabel1 {
-        HorizontalAlignment = Center;
-        Position = (160, 380);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Home;
-        TextSize = 15;
-    }
-
-    Label.waterBarLabel1 {
-        HorizontalAlignment = Center;
-        Position = (240, 380);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Water;
-        TextSize = 15;
-    }
-
-    Label.foodBarLabel1 {
-        HorizontalAlignment = Center;
-        Position = (320, 380);
-        Renderer = &1;
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Food;
-        TextSize = 15;
-    }
-
-    Label."Percent Unit Label 1" {
-        HorizontalAlignment = Center;
-        Position = (400, 40);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = 100%;
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label."Percent Unit Label 2" {
-        HorizontalAlignment = Center;
-        Position = (400, 125);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = 75%;
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label."Percent Unit Label 3" {
-        HorizontalAlignment = Center;
-        Position = (400, 210);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = 50%;
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label."Percent Unit Label 4" {
-        HorizontalAlignment = Center;
-        Position = (400, 295);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = 25%;
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label.percentUnitLabel1 {
-        HorizontalAlignment = Center;
-        Position = (400, 340);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = "Lbs of";
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label.percentUnitLabel2 {
-        HorizontalAlignment = Center;
-        Position = (400, 360);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Carbon;
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label.percentUnitLabel3 {
-        HorizontalAlignment = Center;
-        Position = (400, 380);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Dioxide;
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label.travelBarLabel2 {
-        HorizontalAlignment = Center;
-        Position = (480, 380);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Travel;
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label.homeBarLabel2 {
-        HorizontalAlignment = Center;
-        Position = (560, 380);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Home;
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label.waterBarLabel2 {
-        HorizontalAlignment = Center;
-        Position = (640, 380);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Water;
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
-
-    Label.foodBarLabel2 {
-        HorizontalAlignment = Center;
-        Position = (720, 380);
-        ScrollbarPolicy = Never;
-        Size = (80, 20);
-        Text = Food;
-        TextSize = 15;
-
-        Renderer {
-            BackgroundColor = transparent;
-            BorderColor = #3C3C3C;
-            Borders = (0, 0, 0, 0);
-            TextColor = #3C3C3C;
-            TextureBackground = None;
-
-            Scrollbar {
-                ArrowBackgroundColor = #F5F5F5;
-                ArrowBackgroundColorHover = white;
-                ArrowColor = #3C3C3C;
-                ArrowColorHover = black;
-                TextureArrowDown = None;
-                TextureArrowDownHover = None;
-                TextureArrowUp = None;
-                TextureArrowUpHover = None;
-                TextureThumb = None;
-                TextureThumbHover = None;
-                TextureTrack = None;
-                TextureTrackHover = None;
-                ThumbColor = #DCDCDC;
-                ThumbColorHover = #E6E6E6;
-                TrackColor = #F5F5F5;
-            }
-        }
-    }
+Label.MainLabel {
+    HorizontalAlignment = Center;
+    Renderer = &1;
+    ScrollbarPolicy = Automatic;
+    Size = (800, 40);
+    Text = "Calculate your carbon footprint easily!";
+    TextSize = 31;
+    VerticalAlignment = Center;
 }
