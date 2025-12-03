@@ -4,8 +4,11 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 #include "Core/Profiles.h"
+#include "Core/Calculator.h"
+
 
 int main()
 {
@@ -113,6 +116,9 @@ int main()
     // set default profile
     profile* userProfile = nullptr;
 
+    // create calculator
+    calculator mainCalculator = calculator();
+
     //presses buttons that we have created
     loginButton->onPress([&]
         {
@@ -140,6 +146,8 @@ int main()
                         edit->setText(userProfile->get_carbon_from_source(mapKey));
                     }
                 }
+
+                mainCalculator.calculate(userProfile->getParameters());
 
                 // set logged in, and close login window
                 loggedIn = true;
@@ -170,6 +178,8 @@ int main()
             bool profileCreationSuccess = currProfiles.create_profile(username, password);
             if (profileCreationSuccess) // success
             {
+                userProfile = currProfiles.login(username, password);
+                mainCalculator.calculate(userProfile->getParameters());
                 loggedIn = true;
                 loginWindow.close();
             }
@@ -187,6 +197,7 @@ int main()
             }
         });
 
+    calculator calculator;
 
     //runs while the window is open
     //gives each event to TGUI to handle
@@ -218,6 +229,12 @@ int main()
                     mainWindow.close();
             }
 
+            auto panel = mainRoot->get<tgui::ScrollablePanel>("MainDataEntryPanel");
+
+            if (!panel)
+                std::cout << "Panel not found\n";
+
+            bool valuesChanged = false;
             // for each widget
             for (auto& widget : mainRoot->get<tgui::ScrollablePanel>("MainDataEntryPanel")->getWidgets())
             {
@@ -232,25 +249,96 @@ int main()
                     tgui::String boxValue = edit->getText();
                     std::string mapValue = boxValue.toStdString();
 
-                    userProfile->update_carbon_source(mapKey, mapValue);
+                    if (userProfile->update_carbon_source(mapKey, mapValue)) valuesChanged = true;
                 }
             }
+
+            // recalculate data if changed
 
             mainWindow.clear();
             //renders window
             mainGui.draw();
+ 
+            // calculate values
+            if (valuesChanged)
+            {
+                mainCalculator.calculate(userProfile->getParameters());
+            }
+            std::unordered_map<std::string, float> tempValues = mainCalculator.get_values();
+
+            float travelSum = tempValues["GasUsageInput"] + tempValues["WalkingInput"] + tempValues["BusInput"] + tempValues["BikeInput"] + tempValues["FlyingInput"];
+            float homeSum = tempValues["HousePowerInput"] + tempValues["NaturalGasInput"];
+            float waterSum = tempValues["BottledWaterInput"] + tempValues["TapWaterInput"] + tempValues["ShowerCountInput"];
+            float foodSum = tempValues["BeefInput"] + tempValues["PorkInput"] + tempValues["ChickenInput"] + tempValues["MuttonInput"] + tempValues["BreadInput"] + tempValues["RiceInput"] + tempValues["FruitInput"] + tempValues["VegetableInput"];
+
+            int currOffset = 0;
+            int barOffset = 80;
+            int roof = 640;
+            int floor = 980;
+            int individualWidth = 60;
+            std::vector<float> sumVector = { travelSum, homeSum, waterSum, foodSum };
+
+            float largestSum = 0.0f;
+            for (float currSum : sumVector)
+            {
+                if (currSum > largestSum)
+                {
+                    largestSum = currSum;
+                }
+            }
+            
+            mainRoot->get<tgui::Panel>("GraphPanel")->get<tgui::Label>("Unit Label 1")->setText(std::to_string(static_cast<int>(largestSum)));
+            mainRoot->get<tgui::Panel>("GraphPanel")->get<tgui::Label>("Unit Label 2")->setText(std::to_string(static_cast<int>(largestSum/4*3)));
+            mainRoot->get<tgui::Panel>("GraphPanel")->get<tgui::Label>("Unit Label 3")->setText(std::to_string(static_cast<int>(largestSum/4*2)));
+            mainRoot->get<tgui::Panel>("GraphPanel")->get<tgui::Label>("Unit Label 4")->setText(std::to_string(static_cast<int>(largestSum/4*1)));
+
+
+            int currBarIndex = 0;
+            sf::RectangleShape bars[4];
+            for (auto currBar : bars)
+            {
+                currOffset = currOffset + barOffset;
+                float barHeight = sumVector[currBarIndex] / largestSum * 340;
+                currBar.setPosition(tgui::Vector2f(static_cast<float>(currOffset), static_cast<float>(roof + 340 - barHeight)));
+                currBar.setSize(tgui::Vector2f(static_cast<float>(individualWidth), static_cast<float>(barHeight)));
+                currBarIndex++;
+                currBar.setFillColor(sf::Color::Blue);
+                mainWindow.draw(currBar);
+            }
+
+
+            std::unordered_map<std::string, float> tempPercents = mainCalculator.get_percentages();
+
+            float travelPercentSum = tempPercents["GasUsageInput"] + tempPercents["WalkingInput"] + tempPercents["BusInput"] + tempPercents["BikeInput"] + tempPercents["FlyingInput"];
+            float homePercentSum = tempPercents["HousePowerInput"] + tempPercents["NaturalGasInput"];
+            float waterPercentSum = tempPercents["BottledWaterInput"] + tempPercents["TapWaterInput"] + tempPercents["ShowerCountInput"];
+            float foodPercentSum = tempPercents["BeefInput"] + tempPercents["PorkInput"] + tempPercents["ChickenInput"] + tempPercents["MuttonInput"] + tempPercents["BreadInput"] + tempPercents["RiceInput"] + tempPercents["FruitInput"] + tempPercents["VegetableInput"];
+
+            currOffset = 400;
+            barOffset = 80;
+            roof = 640;
+            floor = 980;
+            individualWidth = 60;
+            std::vector<float> percentSumVector = { travelPercentSum, homePercentSum, waterPercentSum, foodPercentSum };
+
+
+
+            currBarIndex = 0;
+            sf::RectangleShape percentBars[4];
+            for (auto currBar : percentBars)
+            {
+                currOffset = currOffset + barOffset;
+                float barHeight = percentSumVector[currBarIndex] * 340;
+                currBar.setPosition(tgui::Vector2f(static_cast<float>(currOffset), static_cast<float>(roof + 340 - barHeight)));
+                currBar.setSize(tgui::Vector2f(static_cast<float>(individualWidth), static_cast<float>(barHeight)));
+                currBarIndex++;
+                currBar.setFillColor(sf::Color::Blue);
+                mainWindow.draw(currBar);
+            }
+
             mainWindow.display();
         }
     }
 
     return 0;
 }
-
-
-
-
-// Calculate Carbon from each source
-// 
-// Sum carbon from sections
-// 
-// make graph(s)

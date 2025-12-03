@@ -70,10 +70,15 @@ const std::string& profile::get_password()
 * Updates a source of carbon for this user.
 * 
 * Arguments: name of the input source and a value.
+* 
+* Returns: true if the value changed, false otherwise.
 */
-void profile::update_carbon_source(const std::string& source, const std::string& value)
+bool profile::update_carbon_source(const std::string& source, const std::string& value)
 {
+	if (user_data.find(source) != user_data.end() && user_data[source] == value) return false;
+
 	user_data.insert_or_assign(source, value);
+	return true;
 }
 
 /**
@@ -88,6 +93,12 @@ std::string profile::get_carbon_from_source(const std::string& source)
 	if (user_data.contains(source)) return user_data.at(source);
 
 	return "";
+}
+
+
+std::unordered_map<std::string, std::string>& profile::getParameters()
+{
+	return user_data;
 }
 
 profile::profile()
