@@ -197,6 +197,7 @@ int main()
             }
         });
 
+    calculator calculator;
 
     //runs while the window is open
     //gives each event to TGUI to handle
@@ -253,8 +254,6 @@ int main()
             }
 
             // recalculate data if changed
-
-
 
             mainWindow.clear();
             //renders window

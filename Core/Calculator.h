@@ -34,7 +34,6 @@ private:
 	float sum = 0.0f;
 	std::unordered_map<std::string, float> percentages;
 
-
 public:
 	calculator();
 
